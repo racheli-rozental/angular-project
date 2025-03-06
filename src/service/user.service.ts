@@ -57,7 +57,11 @@ export class AuthService {
     );
   }
   
-//   addCourse(course: any): Observable<any> {
-//     return this.http.post(`${this.apiUrlcours}/courses`, course);
-// }
+  addCourse(course: { title: string; description: string; teacherId: number }): Observable<any> {
+    const token = sessionStorage.getItem('token');
+    const headers = new HttpHeaders({
+      'Authorization': `Bearer ${token}`
+    });
+    return this.http.post(`${this.apiUrlcours}/courses`, course, { headers });
+  }
 }

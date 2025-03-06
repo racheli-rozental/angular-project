@@ -37,13 +37,13 @@ export class AddCourseComponent {
       alert('אין לך הרשאה להוסיף קורס');
       return;
     }
-    // this.userService.addCourse(this.course).subscribe(
-    //   (response) => {
-    //     console.log('Course added:', response);
-    //   },
-    //   (error) => {
-    //     console.error('Error adding course:', error);
-    //   }
-    // );
+    this.userService.addCourse(this.course).subscribe(
+      (response) => {
+        console.log('Course added:', response);
+      },
+      (error) => {
+        console.error('Error adding course:', error);
+      }
+    );
   }
 }
