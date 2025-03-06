@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../service/user.service';
 import { Router } from '@angular/router';
@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   templateUrl: './login.component.html'
 })
 export class LoginComponent implements OnInit {
+  @Output() userId = new EventEmitter<number>();
   loginForm!: FormGroup;
 
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
@@ -20,8 +21,9 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]]
     });
   }
-
   onLogin() {
+    const teacherId = 1; // לדוגמה, ה-ID של המורה
+    this.userId.emit(teacherId);
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
         

@@ -57,8 +57,7 @@ export class AuthService {
     );
   }
   
-addCourse(): Observable<any> {  
- 
-}
-
+//   addCourse(course: any): Observable<any> {
+//     return this.http.post(`${this.apiUrlcours}/courses`, course);
+// }
 }
