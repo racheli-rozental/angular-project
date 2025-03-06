@@ -1,0 +1,8 @@
+<p>courses</p>
+<!-- courses.component.html -->
+<h2>Courses</h2>
+@for(course of courses;track  course.id)
+{
+  <li> {{ course.title }} - {{ course.description }}</li>
+  
+}
