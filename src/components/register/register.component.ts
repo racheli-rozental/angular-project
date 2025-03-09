@@ -1,64 +1,3 @@
-// // register.component.ts
-// import { Component } from '@angular/core';
-// import { UserService } from '../../service/user.service';
-// import { FormsModule as formsModule } from '@angular/forms';
-
-// @Component({
-//   selector: 'app-register',
-//   imports: [formsModule],
-//   templateUrl: './register.component.html'
-// })
-// export class RegisterComponent {
-//   user = {
-//     name: '',
-//     email: '',
-//     password: '',
-//     role: '' // או כל תפקיד אחר שתרצה
-//   };
-
-//   constructor(private userService: UserService) { }
-
-//   register() {
-//     this.userService.register(this.user).subscribe(
-//       response => {
-//         console.log('User registered successfully', response);
-//       },
-//       error => {
-//         console.error('Error registering user', error);
-//       }
-//     );
-//   }
-// }
-////////////////
-// import { Component } from '@angular/core';
-
-// import { UserService } from '../../service/user.service';
-// import { FormsModule } from '@angular/forms';
-// @Component({
-//   selector: 'app-register',
-//   imports:[FormsModule],
-//   templateUrl: './register.component.html'
-// })
-// export class RegisterComponent {
-//   name: string = '';
-//   email: string = '';
-//   password: string = '';
-//   role: string = '';
-
-//   constructor(private userService: UserService) {}
-
-//   addUser() {
-//     this.userService.addUser(this.name, this.email, this.password, this.role).subscribe(
-//       response => {
-//         console.log('User added successfully!', response);
-//       },
-//       error => {
-//         console.error('Error adding user:', error);
-//       }
-//     );
-//   }
-// }
-
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
@@ -88,7 +27,7 @@ export class RegisterComponent {
         this.userService.register( {name, email, password, role}).subscribe({
           next: (res) => {
             this.userService.saveToken(res.token);
-            this.router.navigate(['/courses']);
+            this.router.navigate(['/']);
           },
           error: (err) => {
             console.error('Registration failed', err);

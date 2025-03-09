@@ -1,0 +1,10 @@
+
+@if(userRole==='admin'||userRole==='teacher'){
+<h3>?אתה בטוח שאתה רוצה למחוק את השיעור</h3>
+<div>
+    <button (click)="onCancel()">לא</button>
+<button (click)="deleteLesson()">כן</button>
+
+</div>
+}
+

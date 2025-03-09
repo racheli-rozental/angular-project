@@ -1,0 +1,72 @@
+/* עיצוב כלליים עבור הטופס */
+form {
+    max-width: 350px; /* רוחב קטן יותר */
+    margin: 50px auto; /* ממורכז בעמוד עם מרווח מהקצוות */
+    padding: 20px;
+    background-color: #f4f4f9; /* רקע בהיר מאוד */
+    border-radius: 10px; /* פינות מעוגלות */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* צל עדין */
+  }
+  
+  /* עיצוב שדות הקלט */
+  input {
+    width: 90%;
+    padding:  15px; /* פדינג קטן יותר מכל הכיוונים */
+    margin-bottom: 8px; /* מרווח קטן יותר בין השדות */
+    border-radius: 6px; /* פינות מעוגלות יותר קטנות */
+    border: 1px solid #ddd; /* קו גבול אפור */
+    font-size: 12px; /* גודל טקסט קטן יותר */
+    color: #333;
+    background-color: #ffffff; /* רקע לבן לשדות הקלט */
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* שינוי עיצוב כאשר השדה ממוקד */
+  input:focus {
+    padding: 30px;
+    border-color: #673ab7; /* צבע גבול סגול כאשר השדה ממוקד */
+    background-color: #e8eaf6; /* שינוי רקע בהיר מאוד בעת פוקוס */
+    outline: none;
+  }
+  
+  /* עיצוב תגיות של שדות הקלט */
+  label {
+    font-size: 14px; /* גודל טקסט קטן יותר */
+    color: #4caf50; /* צבע ירוק בהיר לתגיות */
+    display: block;
+    margin-bottom: 4px; /* מרווח קטן יותר */
+    font-weight: 600;
+  }
+  
+  /* עיצוב שגיאות ליד השדות */
+  div {
+    color: #f44336; /* צבע אדום לשגיאות */
+    font-size: 12px; /* גודל טקסט קטן יותר */
+    margin-top: 4px;
+  }
+  
+  /* עיצוב כפתור הוספת שיעור */
+  button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 15px; /* כפתור בגודל קטן יותר */
+    background-color: #3f51b5; /* רקע כחול כהה */
+    color: white; /* צבע טקסט לבן */
+    font-size: 14px; /* גודל טקסט קטן יותר */
+    font-weight: bold;
+    border: none;
+    border-radius: 6px; /* פינות מעוגלות לכפתור */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #303f9f; /* צבע רקע כהה יותר כאשר ריחופים */
+    transform: scale(1.05); /* הגדלת הכפתור באופן עדין בריחוף */
+  }
+  
+  button:disabled {
+    background-color: #c5cae9; /* צבע רקע בהיר כאשר הכפתור לא פעיל */
+    cursor: not-allowed;
+  }
+  

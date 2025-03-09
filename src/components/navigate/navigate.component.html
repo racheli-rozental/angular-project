@@ -1,0 +1,19 @@
+
+<mat-toolbar color="primary">
+    
+  
+    <!-- כפתור הרשמה -->
+    <button mat-raised-button class="primary"  (click)="onRegister()"><mat-icon>person_add</mat-icon>Register</button>
+  
+
+    @if(userRole==='admin'||userRole==='teacher'){
+        <button  mat-raised-button class="primary" (click)="onAddCourse()"> <mat-icon>add</mat-icon>Add Course</button>
+        }
+  
+    <!-- כפתור התחברות -->
+    <button mat-raised-button class="primary"  (click)="onLogin()"> <mat-icon>login</mat-icon> Login</button>
+  
+    <!-- כפתור צפייה בקורסים -->
+    <button mat-raised-button class="primary"  (click)="getCourses()"> <mat-icon>visibility</mat-icon>Get Courses</button>
+  </mat-toolbar>
+  

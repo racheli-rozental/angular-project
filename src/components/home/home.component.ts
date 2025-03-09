@@ -1,16 +1,17 @@
 // courses.component.ts
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../../service/user.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrl: './home.component.css'
 })
 export class CoursesComponent implements OnInit {
   courses: any[] = [];
 
-  constructor(private courseService: AuthService) { }
+  constructor(private courseService: AuthService,private router:Router) { }
 
   ngOnInit(): void {
     this.loadCourses();
@@ -30,5 +31,13 @@ export class CoursesComponent implements OnInit {
         console.error('Error fetching courses:', error);
       }
     );
+  }
+  // onSelect():void{
+  //   this.router.navigate(['/courseDetails']);
+
+  // }
+  
+  viewCourseDetails(courseId: number) {
+    this.router.navigate(['/course-details', courseId]); // העבר לנתיב פרטי הקורס עם ה-ID
   }
 }

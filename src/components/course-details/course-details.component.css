@@ -1,0 +1,47 @@
+/* עיצוב ה-mat-toolbar */
+h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin: 30px 0;
+  }
+  
+  
+pre {
+    font-size: 18px;
+    color: #444;
+    background-color: #f4f4f4;
+    padding: 15px; 
+    border-radius: 8px;
+    margin: 30px auto; 
+    width: 30%; 
+    max-width: 700px; 
+    white-space: pre-wrap; 
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    box-sizing: border-box; 
+  }
+  
+mat-toolbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgb(23, 209, 209); /* צבע רקע כהה לכל ה-toolbar */
+    color: white; /* צבע טקסט לבן */
+    padding: 0 20px;
+    border-radius: 10px;
+  } 
+  mat-toolbar .primary{
+    color: aqua;
+    background-color: blue;
+    font-size: 15px;
+    padding: 7px;
+  }
+  #lesson
+  {
+    margin-left: 15px;
+    border-radius: 17px;
+  }
+  
+  

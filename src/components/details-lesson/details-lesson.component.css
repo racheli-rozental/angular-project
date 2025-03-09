@@ -1,0 +1,57 @@
+/* עיצוב כותרת ה-lesson */
+h3 {
+    color: #333; /* צבע טקסט כהה לקריאות טובה */
+    font-size: 22px; /* גודל טקסט מתאים */
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center; /* למרכז את הכותרת */
+    line-height: 1.5;
+  }
+  
+  /* עיצוב לדיב שמכיל את הכפתורים */
+  .button-container {
+    display: flex;
+    flex-direction: column; /* כפתורים יהיו בתור עמודה */
+    align-items: center; /* מרכז את הכפתורים */
+    gap: 20px; /* מרווח בין הכפתורים */
+    margin-top: 30px; /* מרווח מהתיאור */
+  }
+  
+  /* עיצוב כפתורים */
+  button {
+    padding: 12px 30px; /* פדינג רחב יותר */
+    border-radius: 8px; /* פינות מעוגלות */
+    font-size: 16px; /* גודל טקסט נוח */
+    font-weight: 600; /* טקסט מודגש */
+    border: none;
+    text-transform: none; /* השאר את הטקסט כפי שהוא */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* צל עדין */
+    transition: transform 0.2s, background-color 0.3s ease; /* שינוי צבע, אפקטים */
+    outline: none;
+    cursor: pointer;
+  }
+  
+  /* כפתור Deleting */
+button.delete {
+    background-color: #d8118c; 
+    color: white;
+  }
+  
+.delete:hover {
+    background-color: #18bac2; 
+    transform: translateY(-3px); 
+  }
+  
+
+ .update {
+    background-color: #e40ee1; 
+    color: white;
+  }
+  
+.update:hover {
+    background-color: #250bea; 
+    transform: translateY(-3px); 
+  }
+  
+ 

@@ -1,0 +1,72 @@
+/* עיצוב הטופס */
+form {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* עיצוב שדות הקלט */
+  input {
+    width: 90%;
+    padding: 12px;
+    margin: 12px 0;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  /* שינוי עיצוב שדה הקלט בעת פוקוס */
+  input:focus {
+    border-color: #4caf50; /* צבע גבול ירוק */
+    background-color: #e8f5e9; /* צבע רקע בהיר */
+    outline: none;
+  }
+  
+  /* עיצוב תגיות (labels) */
+  label {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+  }
+  
+  /* עיצוב שגיאות */
+  div {
+    color: #f44336; /* צבע שגיאות אדום */
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* עיצוב כפתור הוספת קורס */
+  button {
+    width: 95%;
+    padding: 12px;
+    background-color: #4caf50; /* צבע ירוק לכפתור */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* שינוי צבע הכפתור בעת ריחוף */
+  button:hover {
+    background-color: #388e3c; /* צבע ירוק כהה */
+    transform: scale(1.05); /* הגדלת הכפתור מעט בריחוף */
+  }
+  
+  /* עיצוב כפתור כשהוא לא פעיל */
+  button:disabled {
+    background-color: #c8e6c9; /* צבע בהיר כשלא ניתן ללחוץ */
+    cursor: not-allowed;
+  }
+  

@@ -1,0 +1,8 @@
+@if(lessonDetails)
+{<h3>{{lessonDetails.content}}</h3>}
+@if(userRole==='admin'|| userRole==='teacher'){
+<div class="button-container">
+    <button mat-button class="delete" (click)="onDeleteLesson(lessonDetails.id)">Delete Lesson</button>
+    <button mat-button class="update" (click)="onUpdate(lessonDetails.id)">Update lesson</button>
+</div>
+}

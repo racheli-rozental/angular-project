@@ -1,0 +1,73 @@
+/* עיצוב הטופס */
+form {
+    width: 100%;
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: bold;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+  
+  input:focus {
+    border-color: #4caf50; /* צבע גבול ירוק בעת פוקוס */
+    outline: none;
+  }
+  
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4caf50; /* צבע ירוק לכפתור */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #45a049; /* ירוק כהה בעת ריחוף */
+  }
+  
+  button:disabled {
+    background-color: #ccc; /* צבע אפור אם הכפתור מושבת */
+    cursor: not-allowed;
+  }
+  
+  /* סגנון מיוחד לשדה readonly */
+  input[readonly] {
+    background-color: #f0f0f0; /* צבע רקע אפור לשדה קריא */
+    cursor: not-allowed; /* סמן העכבר יהיה כעכבר חסום */
+  }
+  
+  /* עיצוב כללי לדף */
+  body {
+    background-color: #e8f5e9; /* רקע בהיר עדין לדף */
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  

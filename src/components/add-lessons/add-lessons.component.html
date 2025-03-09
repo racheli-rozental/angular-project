@@ -1,0 +1,27 @@
+
+<form [formGroup]="addLessonform" (ngSubmit)="addCourse()">
+    <div>
+        <label for="title">Title:</label>
+        <input id="title" formControlName="title">
+
+        @if(addLessonform.get('title')?.invalid && addLessonform.get('title')?.touched)
+        {<div>
+            שם הוא שדה חובה.
+        </div>}
+    </div>
+
+
+    <div>
+        <label for="contect">Content:</label>
+        <input id="content" type="text" formControlName="content">
+        @if(addLessonform.get('content')?.invalid && addLessonform.get('content')?.touched)
+        {<div>
+            תאור הוא שדה חובה.
+        </div>}
+
+    </div>
+
+    <button type="submit" [disabled]="addLessonform.invalid">add Lesson</button>
+</form>
+
+  

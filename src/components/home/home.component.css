@@ -1,0 +1,49 @@
+/* כללי לדף הקורסים */
+h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #673ab7; /* צבע סגול */
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* עיצוב כפתורים של הקורסים */
+  button {
+    display: block;
+    width: 80px; /* רוחב של 80px */
+    height: 40px; /* גובה של 40px */
+    margin: 10px auto; /* למרכז את הכפתור בעמוד */
+    padding: 0; /* אין צורך בפדינג, כי הגודל כבר מוגדר */
+    background-color: #2196f3; /* צבע כחול */
+    color: white;
+    font-size: 14px; /* גודל טקסט קטן יותר */
+    font-weight: bold;
+    border: none;
+    border-radius: 8px; /* פינות מעוגלות */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center; /* למרכז את הטקסט בכפתור */
+  }
+  
+  /* שינוי צבע כפתור כאשר מעבירים עליו את העכבר */
+  button:hover {
+    background-color: #1976d2; /* כחול כהה */
+    transform: translateY(-3px); /* העלאת הכפתור מעט */
+  }
+  
+  /* שינוי צבע כפתור כאשר הוא לא פעיל */
+  button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    color: #777;
+  }
+  
+  /* עיצוב טקסט הכותרת של כל קורס */
+  button h3 {
+    margin: 0;
+    font-size: 14px; /* גודל טקסט קטן */
+    text-align: center;
+    color: white; /* צבע לבן לכותרת */
+    font-weight: normal;
+  }
+  

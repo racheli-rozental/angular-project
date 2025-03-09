@@ -9,22 +9,17 @@ import { AppRoutingModule, routes } from './app.routes';
 
 
 import { RouterModule } from '@angular/router';
+import { NavigateComponent } from "../components/navigate/navigate.component";
+import { DeleteCourseComponent } from "../components/delete-course/delete-course.component";
 
 
 @Component({
   selector: 'app-root',
-  imports: [HttpClientModule, RegisterComponent, CommonModule, RouterOutlet, LoginComponent],
+  imports: [HttpClientModule, CommonModule, RouterOutlet, NavigateComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   constructor(private router: Router) {}
-  title = 'angular-project';
-  teacherId!: number;
-
-  onUserIdReceived(id: number) {
-    this.teacherId = id;
-  }
-
- 
+  title = 'angular-project'; 
 }

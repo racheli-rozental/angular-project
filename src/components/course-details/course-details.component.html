@@ -1,0 +1,25 @@
+@if(courseDetails){
+    <h2>{{ courseDetails.title }}</h2> 
+  <pre>{{ courseDetails | json }}</pre>
+}
+<mat-toolbar color="primary">
+@if(userRole==='admin'||userRole==='teacher'){
+<button mat-raised-button class="primary" (click)="onDelete()">Delete Course</button>
+<button mat-raised-button class="primary" (click)="onApdate()">Update Course</button>
+<button mat-raised-button class="primary" (click)="onAddLessons()">Add Lessons</button>
+
+}
+<button mat-raised-button class="primary"(click)="getLessons()"> lessons of course</button>
+
+
+    @for(lesson of courselessons; track lesson.id) {
+      <button mat-raised-button class="primary" id="lesson" (click)="onLesson(lesson.id,lesson)">{{ lesson.title }} </button>
+      
+    
+  }
+  
+</mat-toolbar>
+
+      
+    
+    

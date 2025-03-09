@@ -1,0 +1,34 @@
+<!-- 
+<form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
+    <label for="title">Title:</label>
+    <input id="title" formControlName="title" />
+  
+    <label for="description">description:</label>
+    <input id="description" type="text" formControlName="description">
+    <label for="teacherId">teacherId:</label>
+    <input id="teacherId" type="text" formControlName="teacherId" readonly>
+  
+    <button type="submit">Update Course</button>
+  </form>
+
+   -->
+
+
+   <form [formGroup]="updateForm" (ngSubmit)="onSubmit()" class="lesson-form">
+    <div class="form-group">
+        <label for="title">Title:</label>
+        <input id="title" formControlName="title" />
+    </div>
+
+    <div class="form-group">
+        <label for="description">Description:</label>
+        <input id="description" type="text" formControlName="description" />
+    </div>
+
+    <div class="form-group">
+        <label for="teacherId">Teacher ID:</label>
+        <input id="teacherId" type="text" formControlName="teacherId" readonly />
+    </div>
+
+    <button type="submit" class="submit-btn">Update Course</button>
+</form>

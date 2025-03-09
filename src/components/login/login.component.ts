@@ -2,17 +2,22 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { AuthService } from '../../service/user.service';
 import { Router } from '@angular/router';
-
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login',
-  imports: [ReactiveFormsModule],
-  templateUrl: './login.component.html'
+  imports: [ReactiveFormsModule,CommonModule],
+  templateUrl: './login.component.html',
+  styleUrl:'./login.component.css'
 })
 export class LoginComponent implements OnInit {
   @Output() userId = new EventEmitter<number>();
   loginForm!: FormGroup;
-
+  alertMessage: string = '';
+  alertType: string = 'error'; // אפשר 'success', 'info', או 'warning'
+  
+  
+  
   constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
@@ -21,40 +26,32 @@ export class LoginComponent implements OnInit {
       password: ['', [Validators.required]]
     });
   }
+  showAlert(message: string, type: string): void {
+    this.alertMessage = message;
+    this.alertType = type;
+    setTimeout(() => {
+      this.alertMessage = ''; // מחיקת ההודעה אחרי 5 שניות
+    }, 5000);
+  }
   onLogin() {
-    const teacherId = 1; // לדוגמה, ה-ID של המורה
-    this.userId.emit(teacherId);
     if (this.loginForm.valid) {
       this.authService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe(
-        
-           response => {
-            console.log('Login successful', response);
-            this.authService.saveToken(response.token);
-            console.log('token:', sessionStorage.getItem('token'));
-            console.log('Navigating to courses...');
-            this.router.navigate(['/courses']);
-            console.log('Navigation command sent.');
-          
+        response => {
+          console.log('Login successful', response);
+          this.authService.saveToken(response.token);
+          this.authService.saveUserId(response.userId);
+          this.authService.setUserRole(response.role); // עדכון תפקיד המשתמש
+          this.router.navigate(['/courses']); 
         },
         error => {
           console.error('Login failed', error);
-          alert('אינך רשום במערכת')
+          this.showAlert('אינך רשום במערכת','faild');
+
+         
         }
       );
     }
-  }
-  onRegister() {
-    this.router.navigate(['/register']);
-  }
- 
 }
 
-// response => {
-//   console.log('Login successful', response);
-//   this.authService.saveToken(response.token);
-//   console.log('token:', sessionStorage.getItem('token'));
-//   console.log('Navigating to courses...');
-//   this.router.navigate(['/courses']);
-//   console.log('Navigation command sent.');
-
-// כאן תוכל לשמור את הטוקן או לבצע פעולות נוספות
+  
+}

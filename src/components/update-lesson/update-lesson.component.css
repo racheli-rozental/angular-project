@@ -1,0 +1,59 @@
+.lesson-form {
+    width: 100%;
+    max-width: 400px;
+    margin: 50px auto;  /* המרחק ממעלה ומטה 50px */
+    padding: 20px;
+    background-color: #f0f8f1; /* צבע רקע ירוק בהיר */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;  /* המרכזת טקסט */
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #2e8b57; /* צבע כותרת ירוק כהה */
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #66cdaa; /* גבול ירוק בהיר */
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 5px;
+  }
+  
+  input:focus {
+    border-color: #3cb371; /* גבול ירוק כהה יותר בעת פוקוס */
+    outline: none;
+  }
+  
+  .submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #32cd32; /* ירוק בהיר */
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+  }
+  
+  .submit-btn:hover {
+    background-color: #228b22; /* ירוק כהה יותר בעת ריחוף */
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+  }
+  

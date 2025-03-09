@@ -1,10 +1,9 @@
-<!-- <p>add-course works!</p>
 <form [formGroup]="addCourseform" (ngSubmit)="addCourse()">
     <div>
-        <label for="name">Nmme:</label>
-        <input id="email" formControlName="email">
+        <label for="title">Title:</label>
+        <input id="title" formControlName="title">
 
-        @if(addCourseform.get('name')?.invalid && addCourseform.get('name')?.touched)
+        @if(addCourseform.get('title')?.invalid && addCourseform.get('title')?.touched)
         {<div>
             שם הוא שדה חובה.
         </div>}
@@ -14,14 +13,14 @@
     <div>
         <label for="description">Description:</label>
         <input id="description" type="text" formControlName="description">
-        @if(addCourseform.get('discride')?.invalid && addCourseform.get('discride')?.touched)
+        @if(addCourseform.get('description')?.invalid && addCourseform.get('description')?.touched)
         {<div>
             תאור הוא שדה חובה.
         </div>}
 
     </div>
 
-
-    <button type="submit" [disabled]="addCourseform.invalid">Login</button>
+    <button type="submit" [disabled]="addCourseform.invalid">add Course</button>
 </form>
-   -->
+
+  

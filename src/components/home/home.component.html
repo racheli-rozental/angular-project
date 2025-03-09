@@ -1,8 +1,8 @@
-<p>courses</p>
-<!-- courses.component.html -->
 <h2>Courses</h2>
-@for(course of courses;track  course.id)
+@for(course of courses;track course.id)
 {
-  <li> {{ course.title }} - {{ course.description }}</li>
+  
+ <button (click)="viewCourseDetails(course.id)"><h3>{{course.title}}</h3></button>
   
 }
+

@@ -1,0 +1,68 @@
+/* עיצוב כותרת השאלה */
+h3 {
+    color: #333; 
+    font-size: 24px; 
+    font-weight: bold; 
+    text-align: center; 
+    margin-bottom: 20px; 
+  }
+  div {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+    gap: 30px; /* מרווח בין הכפתורים */
+    margin-top: 30px; /* מרווח למעלה */
+  }
+  
+  /* עיצוב כפתורים */
+  button {
+    padding: 15px 35px;  
+    border-radius: 50px; 
+    font-size: 18px; 
+    font-weight: 700; 
+    border: none; 
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;  
+    width: 180px;
+    text-transform: uppercase;
+    letter-spacing: 2px; /* רווח בין האותיות */
+    
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+  
+  button:nth-child(2) {
+    background-color: #ff5e57; 
+    color: white; 
+  }
+  
+  button:nth-child(2):hover {
+    background-color: #d04b47; 
+    transform: translateY(-5px); /* העלאת הכפתור */
+    box-shadow: 0px 12px 30px rgba(255, 94, 87, 0.3); /* צל יותר מודגש */
+  }
+  
+  /* כפתור 'לא' - צבע בולט נוסף */
+  button:nth-child(1) {
+    background-color: #4cd137; /* ירוק בהיר */
+    color: white; /* צבע טקסט לבן */
+  }
+  
+  button:nth-child(1):hover {
+    background-color: #44b02d; /* ירוק כהה יותר */
+    transform: translateY(-5px); /* העלאת הכפתור */
+    box-shadow: 0px 12px 30px rgba(76, 209, 55, 0.3); /* צל יותר מודגש */
+  }
+  
+  /* עיצוב כללי */
+  body {
+    font-family: 'Arial', sans-serif; /* גופן מודרני ונקי */
+    background-color: #f7f7f7; /* צבע רקע בהיר */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ממקם את כל הדף במרכז */
+  }
+  
