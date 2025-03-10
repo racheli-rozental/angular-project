@@ -11,6 +11,8 @@ import { UpdateCourseComponent } from '../components/update-course/update-course
 import { DeleteLessonComponent } from '../components/delete-lesson/delete-lesson.component';
 import { DetailsLessonComponent } from '../components/details-lesson/details-lesson.component';
 import { UpdateLessonComponent } from '../components/update-lesson/update-lesson.component';
+import { JoinCourseComponent } from '../components/join-course/join-course.component';
+import { LeavingCourseComponent } from '../components/leaving-course/leaving-course.component';
 
 export const routes: Routes = [
     { path: 'courses', component: CoursesComponent },
@@ -23,9 +25,10 @@ export const routes: Routes = [
     {path:'add-lessons/:id',component: AddLessonsComponent},
     {path: 'update/:id',component:UpdateCourseComponent},
     {path:'lesson-delete/:courseId/:lessonId',component:DeleteLessonComponent},
-    // {path:'lesson/:courseId/:lessonId',component:DeleteLessonComponent},
     { path: 'updateLesson/:courseId/:lessonId', component: UpdateLessonComponent },
     {path:'lessons/:courseId/:lessonId',component:DetailsLessonComponent},
+    {path:'Course-registration/:courseId',component:JoinCourseComponent},
+    {path:'leaving-course/:courseId',component:LeavingCourseComponent}
 
 
 

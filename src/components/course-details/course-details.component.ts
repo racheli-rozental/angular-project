@@ -72,5 +72,11 @@ export class CourseDetailsComponent {
   onApdate(){
     this.router.navigate(['/update',this.courseId])
   }
+  onCourseRegistration(){
+    this.router.navigate(['/Course-registration',this.courseId]); 
+  }
+  onLeavingCourse(){
+    this.router.navigate(['leaving-course',this.courseId])
+  }
 
 }

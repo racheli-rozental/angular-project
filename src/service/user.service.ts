@@ -56,13 +56,11 @@ export class AuthService {
   }
   
   addCourse(course: { title: string; description: string; }): Observable<any> {
-    console.log('Adding course:', course);
     const token = sessionStorage.getItem('token');
-    console.log('Token:', token);
     const headers = new HttpHeaders({
       'Authorization': `Bearer ${token}`
     });
-    console.log('Headers:', headers);
+    
     return this.http.post(`${this.apiUrlcours}/courses`, course, { headers });
   }
   deleteCourse(courseId: number): Observable<any> {

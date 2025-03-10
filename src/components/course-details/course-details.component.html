@@ -10,12 +10,12 @@
 
 }
 <button mat-raised-button class="primary"(click)="getLessons()"> lessons of course</button>
+<button mat-raised-button class="primary" (click)="onCourseRegistration()">Course registration</button>
+<button mat-raised-button class="primary" (click)="onLeavingCourse()">Leaving Course</button>
 
 
     @for(lesson of courselessons; track lesson.id) {
       <button mat-raised-button class="primary" id="lesson" (click)="onLesson(lesson.id,lesson)">{{ lesson.title }} </button>
-      
-    
   }
   
 </mat-toolbar>

@@ -1,0 +1,37 @@
+/* מרכז את כל התוכן בתוך הדף */
+body, html {
+    height: 100%;
+
+    display: flex;
+    justify-content: center; /* מרכז את התוכן אופקית */
+    align-items: center; /* מרכז את התוכן אנכית */
+    font-family: Arial, sans-serif; /* הגדרת גופן */
+  }
+  
+  /* קונטיינר לכפתור */
+  .button-container {
+    margin-top: 50px;
+    text-align: center; /* מרכז את התוכן בתוך הקונטיינר */
+  }
+  
+  /* עיצוב הכפתור */
+  .register-button {
+    background-color: #007bff;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+  }
+  
+  .register-button:active {
+    background-color: #004085;
+  }
+  
